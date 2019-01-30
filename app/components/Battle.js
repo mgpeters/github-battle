@@ -30,6 +30,7 @@ class PlayerInput extends React.Component {
             this.props.id,
             this.state.username
         );
+        console.log('handleSubmit fired')
     }
 
     render() {
@@ -82,7 +83,7 @@ class Battle extends React.Component {
             newState[id + 'Name'] = username;
             newState[id + 'Image'] = 'http://github.com/' + username + '.png?size=200';
             return newState;
-        })
+        });
     }
 
     render() {
@@ -96,7 +97,7 @@ class Battle extends React.Component {
                         <PlayerInput 
                         id='playerOne'
                         label='Player One'
-                        handleSubmit={ this.handleSubmit }
+                        onSubmit={ this.handleSubmit }
                     />}
 
                     {!playerTwoName &&
