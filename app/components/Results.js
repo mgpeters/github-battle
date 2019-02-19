@@ -7,7 +7,7 @@ var PlayerPreview = require('./PlayerPreview');
 
 function Profile (props) {
     var info = props.info;
-    
+
     return (
         <PlayerPreview avatar={ info.avatar_url } username= { info.login }>
             <ul className='space-list-items'>
